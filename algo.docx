@@ -1,0 +1,51 @@
+﻿ALGORITHM 
+
+A random dataset is generated using scikit-learns inbuilt function called make-moons.
+The dataset has 2 classes with 3 elements X[i:0] and X[i:1] with input and color as output. The 2 classes are depicted as blue and red in the scatterplot diagram. 
+
+
+The length of the dataset is stored and input and output layer dimensionalities are set to 2.
+Learning rate is set to 0.05
+And regularization is set is set to 0.01
+This means that we may spend more time to learn and not overfit the dataset.
+We ask the user how many layers deep the model should be and if he wants the loss to be printed after every 1000 iterations.
+By default, we set it to 10000 iterations and train a 20 hidden layer model and allow loss to be printed.
+
+We now start training the neural network with back propagation using gradient descent. Here we will use tanh as the activation function. 
+We assign default positive value to the weights and bias.
+We loop from 0 to the number of iterations (10000)
+Each time we add the bias to the weights and apply activation on them.
+Z_i is the input of layer i and a_i is the output of layer i after applying the activation function. W_1, b_1, W_2, b_2 are parameters of the network, which we need to learn from our training data. 
+
+Now we must calculate the error in our neural network. For this we use a cross-entropy loss function, commonly called the negative log likelihood function. The formula used to calculate it is given below. 
+
+
+We use simple gradient descent and calulcate the values using the backpropagation derivatives in the next step of our the training.
+
+
+
+
+
+
+
+
+
+
+After every 1000 iterations the loss is calculated and printed if the user set print_loss to TRUE. 
+
+The model is now fully trained the Weights W1 W2 and Bias b1 b2 are fed as arrays into the predict model function when the output is classified and the output is returned. 
+
+Using a lamda operation a function for the predictions is created and the plot_decision boundary function is called to calculate the contour for the decision boundary over the scatter plot. 
+
+The decision boundary is then drawn over the scatter plot and the respective red and blue regions are shaded. The output is then shown as below.
+
+
+
+
+
+
+
+
+
+
+
